@@ -5937,7 +5937,9 @@ ul {
 .welcome-three__small-img {
   position: absolute;
   bottom: 0;
-  left: -100px;
+  left: -150px;
+  /* make masll image colorful */
+  width: 1px;
   background-color: var(--mibooz-black);
   z-index: 2;
 }
