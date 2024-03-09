@@ -2,11 +2,11 @@ import bg from "@/images/shapes/every-stage-shape.png";
 
 const everyStage = {
   bg,
-  tagline: "best creative agency",
-  title: "We care about Every stage in a customer journey",
+  tagline: "IGNITING DIGITAL TRANSFORMATION FOR BUSINESSES",
+  title: "EMPOWERING GROWTH WITH INNOVATIVE INTERNET SOLUTIONS",
   texts: [
-    "providing innovative Website solutions for future.",
-    "There are many variations of passages of available but majority have suffered alteration in some form, by humou or randomised words which don't look even slightly believable.",
+    "TAILORING FRONT END AND BACKEND SOLUTIONS TO FIT YOUR BUSINESS NEEDS",
+    "At Sibila Digital Agency, we understand the importance of tailoring digital solutions to meet the unique requirements of each business. From frontend design to backend development, our customized solutions ensure that your digital presence aligns perfectly with your brand identity and resonates effectively with your audience.",
   ],
   tabButtons: [
     {
@@ -19,41 +19,41 @@ const everyStage = {
     },
     {
       id: "history",
-      title: "Our History",
+      title: "Our Values",
     },
   ],
   tabContents: [
     {
       id: "mission",
-      text: "There are many variations of passages of available but majority alteration in some form, by humou or randomised words which don't look even slightly believable. There are many variations of passages of available.",
-      image: "tab-content-img.jpg",
+      text: "Catalyzing innovation, one project at a time. Our mission is to empower businesses with transformative digital solutions, fueled by creativity, collaboration, and dedication to client success.",
+      image: "mission2resize.jpg",
       points: [
-        "Nsectetur cing elit",
-        "Suspe ndisse suscip sagittis leo",
-        "Entum estib dignissim posuere",
-        "If you are going to use a pass",
+        "Innovation Catalyst",
+        "Client Empowerment",
+        "Collaborative Excellence",
+        "Problem-Solving Prowess",
       ],
     },
     {
       id: "vision",
-      text: "There are many variations of passages of available but majority alteration in some form, by humou or randomised words which don't look even slightly believable. There are many variations of passages of available.",
-      image: "tab-content-img.jpg",
+      text: "Forging a digital landscape where possibilities are limitless and innovation thrives.",
+      image: "binocularsresizecropped.jpeg",
       points: [
-        "Nsectetur cing elit",
-        "Suspe ndisse suscip sagittis leo",
-        "Entum estib dignissim posuere",
-        "If you are going to use a pass",
+        "Limitless Possibilities",
+        "Technological Leadership",
+        "Global Impact",
+        "Digital Transformation",
       ],
     },
     {
       id: "history",
-      text: "There are many variations of passages of available but majority alteration in some form, by humou or randomised words which don't look even slightly believable. There are many variations of passages of available.",
-      image: "tab-content-img.jpg",
+      text: "At the heart of our agency lie values of integrity, innovation, and client-centricity. We uphold transparency, excellence, and empathy in every interaction, driving our commitment to delivering exceptional digital solutions tailored to your needs.",
+      image: "compassresizeandcropped.jpeg",
       points: [
-        "Nsectetur cing elit",
-        "Suspe ndisse suscip sagittis leo",
-        "Entum estib dignissim posuere",
-        "If you are going to use a pass",
+        "Integrity",
+        "Innovation",
+        "Client-Centricity",
+        "Excellence",
       ],
     },
   ],

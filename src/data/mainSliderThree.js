@@ -23,7 +23,7 @@ const mainSliderThree = [
       },
     ],
     title: "ELEVATE YOUR\n DIGITAL FOOTPRINT",
-    text: "Crafting tailored digital solutions to maximize your online potential.",
+    text: "Crafting tailored web solutions and mobile applications to maximize your online potential.",
     arrow,
   },
   {

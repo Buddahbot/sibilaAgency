@@ -1,6 +1,6 @@
 const ctaTwo = {
   icon: "icon-consulting",
-  title: "92% on Schedule",
+  title: "We speak your language: \n clear, concise, and client-focused.",
 };
 
 export default ctaTwo;

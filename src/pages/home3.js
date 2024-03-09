@@ -20,12 +20,12 @@ const Home3 = () => {
       <CTATwo />
       <ServicesThree />
       <WelcomeThree />
-      <WatchVideo />
+      {/* <WatchVideo /> */}
       <EveryStage />
       <ProjectOne />
       <WeBuild />
       <WeCan />
-      <CounterOne />
+      {/* <CounterOne /> */}
       <BlogOne />
       <BrandOne className="brand-three" />
     </Layout>

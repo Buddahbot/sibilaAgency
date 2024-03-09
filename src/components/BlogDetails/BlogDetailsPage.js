@@ -8,11 +8,11 @@ const BlogDetailsPage = () => {
     <section className="blog-details">
       <Container>
         <Row>
-          <Col xl={8} lg={7}>
+          <Row xl={8} lg={7}>
             <BlogDetailsLeft />
-          </Col>
+          </Row>
           <Col xl={4} lg={5}>
-            <Sidebar />
+            {/* <Sidebar /> */}
           </Col>
         </Row>
       </Container>

@@ -19,7 +19,7 @@ const blogTwo = {
       date: "26 aug",
       admin: "admin",
       comments: 2,
-      title: "Uniquely enable accurate supply chains",
+      title: "Uniquely eeenable eaccurate supply chains",
     },
     {
       id: 3,

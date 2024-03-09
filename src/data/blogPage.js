@@ -13,7 +13,7 @@ const blogPage = [
     date: "26 aug",
     admin: "admin",
     comments: 2,
-    title: "Uniquely enable accurate supply chains",
+    title: "eeeee accurate supply chains",
   },
   {
     id: 3,

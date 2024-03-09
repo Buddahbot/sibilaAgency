@@ -9,7 +9,7 @@ const projectTwo = {
     },
     {
       id: 2,
-      name: "Branding",
+      name: "Brandinggg",
       filterData: "bra",
     },
     {

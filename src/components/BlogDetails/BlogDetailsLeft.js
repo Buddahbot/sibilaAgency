@@ -39,27 +39,32 @@ const BlogDetailsLeft = () => {
           <li>
             <Link href="/blog-details">
               <a>
-                <i className="far fa-user-circle"></i> By {admin}
+                {/* <i className="far fa-user-circle"></i> By {admin} */}
               </a>
             </Link>
           </li>
           <li>
-            <span>/</span>
+            <p></p>
+           
+            {/* <span>/</span> */}
           </li>
           <li>
             <Link href="/blog-details">
               <a>
-                <i className="far fa-comments"></i> {comments.length} Comments
+                {/* <i className="far fa-comments"></i> {comments.length} Comments */}
               </a>
             </Link>
           </li>
         </ul>
         <h3 className="blog-details__title">{title}</h3>
         {texts.map((text, i) => (
-          <p key={i} className={`blog-details__text-${i + 1}`}>
-            {text}
-          </p>
-        ))}
+  <div key={i}>
+    {React.createElement('div', { dangerouslySetInnerHTML: { __html: text } })}
+  </div>
+))}
+
+
+
       </div>
       <div className="blog-details__bottom">
         <p className="blog-details__tags">
@@ -87,7 +92,7 @@ const BlogDetailsLeft = () => {
           ))}
         </ul>
       </div>
-      <div className="comment-one">
+      {/* <div className="comment-one">
         <h3 className="comment-one__title">{comments.length} Comments</h3>
         {comments.map(({ id, comment, name, image }) => (
           <div key={id} className="comment-one__single">
@@ -159,7 +164,7 @@ const BlogDetailsLeft = () => {
             </Col>
           </Row>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

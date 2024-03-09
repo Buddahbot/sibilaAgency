@@ -1,6 +1,6 @@
 const blogOne = {
-  tagline: "directly from the blog",
-  title: "What’s happening?",
+  tagline: "",
+  title: "Our Blog",
   blogs: [
     {
       id: 1,
@@ -13,10 +13,10 @@ const blogOne = {
     {
       id: 2,
       image: "blog-one-img-2.jpg",
-      date: "26 aug",
+      date: "26 aug 2023",
       admin: "admin",
       comments: 2,
-      title: "Uniquely enable accurate supply chains",
+      title: "Unlock 8 Key Benefits of Software Outsourcing \n for Your Business Efficiency.",
     },
     {
       id: 3,

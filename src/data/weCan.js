@@ -2,8 +2,8 @@ import bg from "@/images/backgrounds/we-can-bg.jpg";
 
 const weCan = {
   bg,
-  tagline: "World is Full with Creativity",
-  title: "Together We can Bring \n More Creativity into the World",
+  tagline: "Creating Value, Making a Difference",
+  title: "A Collaborative Journey",
 };
 
 export default weCan;

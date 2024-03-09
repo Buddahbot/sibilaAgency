@@ -2,13 +2,13 @@ import bg from "@/images/shapes/site-footer-top-shape.png";
 
 const footerData = {
   bg,
-  title: "Your Perfect Business Partner Solution",
-  phone: "92 666 888 0000",
+  title: "We help you solve business problems, foster customer loyalty, and grow your income.",
+  phone: "34 661 02 36 22",
   email: "needhelp@company.com",
-  address: "86 Road Broklyn Street, 600",
-  city: "New York, USA",
+  address: "Vista Hermosa 117",
+  city: "Santa Margarita, Spain",
   year: new Date().getFullYear(),
-  author: "Mibooz",
+  author: "Sibila Digital Agency",
   socials: [
     {
       id: 1,
@@ -34,54 +34,54 @@ const footerData = {
   links: [
     {
       id: 1,
-      title: "Our Services",
+      title: "Home",
       href: "/services",
     },
     {
       id: 2,
-      title: "Meet Our Team",
+      title: "About",
       href: "/team",
     },
     {
       id: 3,
-      title: "Our Portfolio",
+      title: "Services",
       href: "/project",
     },
-    {
-      id: 4,
-      title: "Contact",
-      href: "/contact",
-    },
-    {
-      id: 5,
-      title: "News",
-      href: "/blog",
-    },
-    {
-      id: 6,
-      title: "FAQs",
-      href: "/faq",
-    },
+    // {
+    //   id: 4,
+    //   title: "Contact",
+    //   href: "/contact",
+    // },
+    // {
+    //   id: 5,
+    //   title: "News",
+    //   href: "/blog",
+    // },
+    // {
+    //   id: 6,
+    //   title: "FAQs",
+    //   href: "/faq",
+    // },
     {
       id: 7,
-      title: "Terms & Conditions",
+      title: "Portfolio",
       href: "/about",
     },
     {
       id: 8,
-      title: "Privacy Policy",
+      title: "Insights",
       href: "/about",
     },
     {
       id: 9,
-      title: "Help",
+      title: "Contact",
       href: "/about",
     },
-    {
-      id: 10,
-      title: "Services",
-      href: "/services",
-    },
+    // {
+    //   id: 10,
+    //   title: "Services",
+    //   href: "/services",
+    // },
   ],
 };
 

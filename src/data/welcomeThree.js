@@ -11,12 +11,12 @@ const welcomeThree = {
     {
       id: 1,
       icon: "icon-recruit",
-      text: "Start development \n with experts",
+      text: "Development of apps for Android, iOS and web browsers.",
     },
     {
       id: 2,
       icon: "icon-consulting",
-      text: "Enhance your web \n look with us",
+      text: "AI integration services designed to revolutionize your business.",
     },
   ],
 };

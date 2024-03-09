@@ -28,7 +28,7 @@ const SiteFooter = () => {
                 href={`tel:${phone.split(" ").join("")}`}
                 className="site-footer__top-left-phone"
               >
-                + {phone}
+                {/* + {phone} */}
               </a>
             </div>
             <div className="site-footer__top-right">

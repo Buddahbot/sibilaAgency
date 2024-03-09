@@ -25,7 +25,7 @@ const ServicesThree = () => {
         </div>
         <div className="services-three__bottom">
           <p className="services-three__bottom-text">
-            {bottomText} <Link href="/services">Get in touch</Link>
+            {bottomText} <Link href="/contact">Get in touch</Link>
           </p>
         </div>
       </Container>

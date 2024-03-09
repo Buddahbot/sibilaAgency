@@ -37,10 +37,10 @@ const ProjectOne = ({ projectPage = false }) => {
                   onClick={() => setFilter(filterData)}
                   className={filter === filterData ? "active" : ""}
                 >
-                  <span className="filter-text">
-                    {name}
-                    <span className="count">{getCount(filterData)}</span>
-                  </span>
+                  {/* <span className="filter-text"> */}
+                    {/* {name} */}
+                    {/* <span className="count">{getCount(filterData)}</span> */}
+                  {/* </span> */}
                 </li>
               ))}
             </ul>

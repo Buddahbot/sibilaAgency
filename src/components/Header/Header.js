@@ -48,21 +48,21 @@ const Header = ({ pageTitle }) => {
           <div className="main-menu-wrapper__right">
             <div className="main-menu-wrapper__call">
               <div className="main-menu-wrapper__call-icon">
-                <Image src={phoneIcon.src} alt="" />
+                {/* <Image src={phoneIcon.src} alt="" /> */}
               </div>
               <div className="main-menu-wrapper__call-number">
                 <p></p>
                 <h5>
-                  <a href={`tel:${phone.split(" ").join("")}`}>+ {phone}</a>
+                  {/* <a href={`tel:${phone.split(" ").join("")}`}>+ {phone}</a> */}
                 </h5>
               </div>
             </div>
             <div className="main-menu-wrapper__search-box">
-              <span
+              {/* <span
                 onClick={toggleSearch}
                 style={{ cursor: "pointer" }}
                 className="main-menu-wrapper__search search-toggler icon-magnifying-glass"
-              ></span>
+              ></span> */}
             </div>
           </div>
         </div>

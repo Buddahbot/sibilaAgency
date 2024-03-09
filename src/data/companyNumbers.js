@@ -10,13 +10,13 @@ const companyNumbers = {
   counters: [
     {
       id: 1,
-      title: "Projects has been Completed",
-      count: 6420,
+      title: "Projects Completed",
+      count: 37,
     },
     {
       id: 2,
-      title: "We have Satisfied Customers",
-      count: 9280,
+      title: "Satisfied Customers",
+      count: 122,
     },
   ],
 };

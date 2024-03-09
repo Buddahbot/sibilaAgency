@@ -14,14 +14,14 @@ const PageHeader = ({ page = "", title = "", parent = "" }) => {
         <div className="page-header__inner">
           <ul className="thm-breadcrumb list-unstyled">
             <li>
-              <Link href="/">Home</Link>
+              {/* <Link href="/">Home</Link> */}
             </li>{" "}
-            {parent && (
+            {/* {parent && (
               <li>
                 <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
               </li>
-            )}{" "}
-            <li>{page || title}</li>
+            )}{" "} */}
+            {/* <li>{page || title}</li> */}
           </ul>
           <h2>{title || page}</h2>
         </div>

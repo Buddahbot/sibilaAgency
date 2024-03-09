@@ -6,7 +6,7 @@ import React from "react";
 const BlogDetails = () => {
   return (
     <Layout pageTitle="Blog Details">
-      <PageHeader page="Blog" title="Blog Details" />
+      <PageHeader page="Blog" title="Blog" />
       <BlogDetailsPage />
     </Layout>
   );
