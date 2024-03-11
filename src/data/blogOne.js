@@ -4,19 +4,19 @@ const blogOne = {
   blogs: [
     {
       id: 1,
-      image: "blog-one-img-1.jpg",
+      image: "blog-one-img-2.jpg",
       date: "26 aug",
       admin: "admin",
       comments: 2,
-      title: "How much does a website cost to build",
+      title: "Unlock 8 Key Benefits of Software Outsourcing \n for Your Business Efficiency.",
     },
     {
       id: 2,
-      image: "blog-one-img-2.jpg",
+      image: "codinghandsresized.jpg",
       date: "26 aug 2023",
       admin: "admin",
       comments: 2,
-      title: "Unlock 8 Key Benefits of Software Outsourcing \n for Your Business Efficiency.",
+      title: "TAPPING INTO THE POTENTIAL OF MOBILE APPS: 9 REASONS YOUR BUSINESS SHOULD HAVE ONE, AND 4 REASONS WHEN IT MIGHT NOT BE THE RIGHT MOVE.",
     },
     {
       id: 3,

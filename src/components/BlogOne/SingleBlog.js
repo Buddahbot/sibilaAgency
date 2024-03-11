@@ -3,7 +3,7 @@ import React from "react";
 import { Col, Image } from "react-bootstrap";
 
 const SingleBlog = ({ blog = {} }) => {
-  const { image, date, admin, comments, title } = blog;
+  const { image, date, admin, comments, title, id } = blog;
 
   return (
     <Col xl={4} lg={4} className="animated fadeInUp">
@@ -43,7 +43,7 @@ const SingleBlog = ({ blog = {} }) => {
             <Link href="/blog-details">{title}</Link>
           </h3>
           <div className="blog-one__read-btn">
-            <Link href="/blog-details">Read More</Link>
+            <Link href={`/blog-details?id=${id}`}>Read More</Link>
           </div>
         </div>
       </div>

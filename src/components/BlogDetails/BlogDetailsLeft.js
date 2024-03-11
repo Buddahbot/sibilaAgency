@@ -5,24 +5,42 @@ import { Col, Image, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import TextSplit from "../Reuseable/TextSplit";
 
-const {
-  image,
-  date,
-  admin,
-  title,
-  texts,
-  tags,
-  socials,
-  pagination,
-  comments,
-} = blogDetails;
+// const {
+//   image,
+//   date,
+//   admin,
+//   title,
+//   texts,
+//   tags,
+//   socials,
+//   pagination,
+//   comments,
+// } = blogDetails;
 
-const BlogDetailsLeft = () => {
+const BlogDetailsLeft = ({ id }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const currentBlogDetails = blogDetails.find(
+    (blog) => blog.id === parseInt(id)
+  );
+
+  console.log("here is currentBlogDetails:", currentBlogDetails);
+
+  const {
+    image,
+    date,
+    admin,
+    title,
+    texts,
+    tags,
+    socials,
+    pagination,
+    comments,
+  } = currentBlogDetails;
 
   const onSubmit = (data) => console.log(data);
 
@@ -39,19 +57,16 @@ const BlogDetailsLeft = () => {
           <li>
             <Link href="/blog-details">
               <a>
-                {/* <i className="far fa-user-circle"></i> By {admin} */}
               </a>
             </Link>
           </li>
           <li>
             <p></p>
            
-            {/* <span>/</span> */}
           </li>
           <li>
             <Link href="/blog-details">
               <a>
-                {/* <i className="far fa-comments"></i> {comments.length} Comments */}
               </a>
             </Link>
           </li>
@@ -62,9 +77,6 @@ const BlogDetailsLeft = () => {
     {React.createElement('div', { dangerouslySetInnerHTML: { __html: text } })}
   </div>
 ))}
-
-
-
       </div>
       <div className="blog-details__bottom">
         <p className="blog-details__tags">
@@ -92,79 +104,6 @@ const BlogDetailsLeft = () => {
           ))}
         </ul>
       </div>
-      {/* <div className="comment-one">
-        <h3 className="comment-one__title">{comments.length} Comments</h3>
-        {comments.map(({ id, comment, name, image }) => (
-          <div key={id} className="comment-one__single">
-            <div className="comment-one__image">
-              <Image
-                src={require(`@/images/blog/${image}`).default.src}
-                alt=""
-              />
-            </div>
-            <div className="comment-one__content">
-              <h3>{name}</h3>
-              <p>{comment}</p>
-              <Link href="/blog-details">
-                <a className="thm-btn comment-one__btn">Reply</a>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="comment-form">
-        <h3 className="comment-form__title">Leave a Comment</h3>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="comment-one__form contact-form-validated"
-        >
-          <Row>
-            <Col xl={6}>
-              <div className="comment-form__input-box">
-                <input
-                  {...register("name", { required: true })}
-                  type="text"
-                  placeholder="Your name"
-                  name="name"
-                />
-                {errors.name && (
-                  <span className="error">This field is required</span>
-                )}
-              </div>
-            </Col>
-            <Col xl={6}>
-              <div className="comment-form__input-box">
-                <input
-                  {...register("email", { required: true })}
-                  type="email"
-                  placeholder="Email address"
-                  name="email"
-                />
-                {errors.email && (
-                  <span className="error">This field is required</span>
-                )}
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xl={12}>
-              <div className="comment-form__input-box">
-                <textarea
-                  {...register("message", { required: true })}
-                  name="message"
-                  placeholder="Write message"
-                ></textarea>
-                {errors.message && (
-                  <span className="error">This field is required</span>
-                )}
-              </div>
-              <button type="submit" className="thm-btn comment-form__btn">
-                Submit a Comment
-              </button>
-            </Col>
-          </Row>
-        </form>
-      </div> */}
     </div>
   );
 };
