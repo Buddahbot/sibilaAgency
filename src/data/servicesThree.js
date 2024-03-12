@@ -5,7 +5,7 @@ const servicesThree = {
   tagline: "Let us do the heavy lifting",
   title: "IT Outsourcing Services",
   bottomText:
-    "Facilitating personalized content delivery and user experiences through advanced web technologies",
+    "Captivate your audience with our visually stunning app designs — let us do the heavy lifting.",
   services: [
     {
       id: 1,

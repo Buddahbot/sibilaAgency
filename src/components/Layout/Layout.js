@@ -27,7 +27,7 @@ const Layout = ({ children, pageTitle }) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-          {pageTitle} || Mibooz || Mibooz NextJS Template For Business
+          {pageTitle} || Sibila Digital Solutions Agency || Web App Development
         </title>
       </Head>
       <Preloader loading={loading} />

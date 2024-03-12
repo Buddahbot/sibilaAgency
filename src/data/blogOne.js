@@ -16,15 +16,15 @@ const blogOne = {
       date: "26 aug 2023",
       admin: "admin",
       comments: 2,
-      title: "TAPPING INTO THE POTENTIAL OF MOBILE APPS: 9 REASONS YOUR BUSINESS SHOULD HAVE ONE, AND 4 REASONS WHEN IT MIGHT NOT BE THE RIGHT MOVE.",
+      title: "Leverage mobile apps: 9 reasons for your business, and 4 reasons against. ",
     },
     {
       id: 3,
-      image: "blog-one-img-3.jpg",
+      image: "ai1resized.jpg",
       date: "26 aug",
       admin: "admin",
       comments: 2,
-      title: "task researched data enterprise process",
+      title: "How AI is Revolutionizing Web App Development: A Comprehensive Guide",
     },
   ],
 };

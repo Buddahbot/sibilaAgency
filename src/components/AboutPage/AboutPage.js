@@ -5,7 +5,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import Tilt from "react-tilt";
 import Title from "../Reuseable/Title";
 
-const { images, badge, tagline, title, text1, text2 } = aboutPage;
+const { images, badge, tagline, title, text1, text2, text3, text4, text5 } = aboutPage;
 
 const AboutPage = () => {
   return (
@@ -36,10 +36,13 @@ const AboutPage = () => {
           <Col xl={6}>
             <div className="about-page__right">
               <Title title={title} tagline={tagline} className="text-left" />
-              <p className="about-page__right-text-1">{text1}</p>
-              <h4 className="about-page__right-text-2">{text2}</h4>
+              <p className="about-page__right-text-1">{text1}</p><p></p>
+              <p className="about-page__right-text-1">{text2}</p><p></p>
+              <p className="about-page__right-text-1">{text3}</p><p></p>
+              <p className="about-page__right-text-1">{text4}</p><p></p>
+              <h4 className="about-page__right-text-2">{text5}</h4>
               <Link href="/about">
-                <a className="thm-btn abut-page__btn">Discover More</a>
+                <a className="thm-btn abut-page__btn">Get in touch</a>
               </Link>
             </div>
           </Col>

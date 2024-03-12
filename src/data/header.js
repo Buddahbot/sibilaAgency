@@ -42,7 +42,7 @@ const navItems = [
   {
     id: 2,
     name: "About",
-    href: "/",
+    href: "/about",
     // subNavItems: [
     //   { id: 1, name: "About", href: "/about" },
     //   { id: 2, name: "Team", href: "/team" },
@@ -95,7 +95,7 @@ const header = {
   logo1,
   logo2,
   phone: "34 661 02 36 22",
-  email: "needhelp@mibooz.com",
+  email: "sebastian.sibila at gmail dotcom",
   phoneIcon,
   navItems,
   socials: [

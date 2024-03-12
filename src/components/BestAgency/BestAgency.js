@@ -39,8 +39,7 @@ const BestAgency = ({ className = "" }) => {
                 </div>
                 <div className="best-agency__experience-text-box">
                   <p className="best-agency__experience-text">
-                    We have <span>{experience}+</span> years of experiences for
-                    give you <br /> better quality results.
+                  We have ample experience dedicated to providing top-tier results.
                   </p>
                 </div>
               </div>
