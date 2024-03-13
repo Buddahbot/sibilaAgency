@@ -26,8 +26,8 @@ const Home3 = () => {
       <WeBuild />
       <WeCan />
       {/* <CounterOne /> */}
-      <BlogOne />
-      <BrandOne className="brand-three" />
+      {/* <BlogOne /> */}
+      {/* <BrandOne className="brand-three" /> */}
     </Layout>
   );
 };

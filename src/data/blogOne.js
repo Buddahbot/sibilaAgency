@@ -5,7 +5,7 @@ const blogOne = {
     {
       id: 1,
       image: "blog-one-img-2.jpg",
-      date: "26 aug",
+      date: "12 sept 2023",
       admin: "admin",
       comments: 2,
       title: "Unlock 8 Key Benefits of Software Outsourcing \n for Your Business Efficiency.",
@@ -13,7 +13,7 @@ const blogOne = {
     {
       id: 2,
       image: "codinghandsresized.jpg",
-      date: "26 aug 2023",
+      date: "26 Nov 2023",
       admin: "admin",
       comments: 2,
       title: "Leverage mobile apps: 9 reasons for your business, and 4 reasons against. ",
@@ -21,7 +21,7 @@ const blogOne = {
     {
       id: 3,
       image: "ai1resized.jpg",
-      date: "26 aug",
+      date: "28 Feb 2024",
       admin: "admin",
       comments: 2,
       title: "How AI is Revolutionizing Web App Development: A Comprehensive Guide",

@@ -26,11 +26,11 @@ const AboutPage = () => {
                   </li>
                 ))}
               </ul>
-              <div className="about-page__badge">
+              {/* <div className="about-page__badge">
                 <Tilt options={{ scale: 1 }}>
                   <Image src={badge.src} alt="" />
                 </Tilt>
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col xl={6}>

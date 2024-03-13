@@ -14,10 +14,10 @@ const About = () => {
       <PageHeader page="About" title="About us" />
       <AboutPage />
       <BrandOne />
-      <DesignStudio className="services-page-design-studio" />
+      {/* <DesignStudio className="services-page-design-studio" /> */}
       {/* <TestimonialTwo className="about-page-testimonial-two" /> */}
-      <TeamOne />
-      <BestAgency className="about-page-best-agency" />
+      {/* <TeamOne />
+      <BestAgency className="about-page-best-agency" /> */}
     </Layout>
   );
 };

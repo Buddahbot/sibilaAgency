@@ -6,7 +6,7 @@ const navItems = [
   {
     id: 1,
     name: "Home",
-    href: "/home3",
+    href: "/",
     // subNavItems: [
     //   {
     //     id: 1,

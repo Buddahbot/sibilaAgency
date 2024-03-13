@@ -15,18 +15,37 @@ const Location = () => {
       <div className="container">
         <Row>
           {locations.map(({ id, text, email, title, phone }) => (
-            <Col key={id} xl={4} lg={4}>
+            <Col key={id} xl={12} lg={12}>
               <div
                 className={`location__single${
                   !text ? " location__single-last" : ""
-                }`}
-              >
-                <h3 className="location__title">{title}</h3>
-                {text ? (
+                }`}  style={{minHeight: "240px"}}
+              > 
+                {/* <h3 className="location__title">{title}</h3> */}
+                <h3>Sibila Digital Agency</h3><p></p>
+                {text ? (<>
                   <p className="location__text">{text}</p>
+                  <a href={`mailto:${email}`} className="location__text">
+                        {email}
+                      </a>
+                      <a
+                        href={`tel:${phone.split(" ").join("")}`}
+                        className="location__text"
+                      >
+                        + {phone}
+                      </a>
+                  <div className="location__social">
+                      {socials.map(({ id, icon, href }) => (
+                        <a key={id} href={href}>
+                          <i className={icon}></i>
+                        </a>
+                      ))}
+                    </div>
+                  </>
                 ) : (
                   <>
-                    <h5 className="location__phone-email">
+                  <p className="location__text">{text}</p>
+                    {/* <h5 className="location__phone-email">
                       <a
                         href={`tel:${phone.split(" ").join("")}`}
                         className="location__phone"
@@ -36,14 +55,8 @@ const Location = () => {
                       <a href={`mailto:${email}`} className="location__email">
                         {email}
                       </a>
-                    </h5>
-                    <div className="location__social">
-                      {socials.map(({ id, icon, href }) => (
-                        <a key={id} href={href}>
-                          <i className={icon}></i>
-                        </a>
-                      ))}
-                    </div>
+                    </h5> */}
+                 
                   </>
                 )}
               </div>
@@ -53,9 +66,9 @@ const Location = () => {
         <Row>
           <Col xl={12}>
             <div className="location__bottom">
-              <p className="location-bottom__text">
+              {/* <p className="location-bottom__text">
                 {title} <Link href="/about">Find Your Solution</Link>
-              </p>
+              </p> */}
             </div>
           </Col>
         </Row>

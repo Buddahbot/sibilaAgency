@@ -1,6 +1,6 @@
 const contactPage = {
-  title: "have question?",
-  tagline: "contact with us",
+  title: "have a question?",
+  tagline: "contact us",
   inputs: [
     {
       type: "text",

@@ -13,10 +13,10 @@ const Services = () => {
     <Layout pageTitle="Services">
       <PageHeader title="Services" />
       <ServicesThree />
-      <TwoBoxes />
-      <ServicesOne />
-      <DesignStudio className="services-page-design-studio" />
-      <ServicesTwo className="services-page-services-two" />
+      {/* <TwoBoxes /> */}
+      {/* <ServicesOne /> */}
+      {/* <DesignStudio className="services-page-design-studio" /> */}
+      {/* <ServicesTwo className="services-page-services-two" /> */}
       <BrandOne />
     </Layout>
   );

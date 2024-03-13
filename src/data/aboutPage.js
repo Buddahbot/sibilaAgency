@@ -1,7 +1,7 @@
 import badge from "@/images/resources/about-page-badge.png";
 
 const aboutPage = {
-  images: ["about-page-img-1.jpg", "womenthumbsup.png"],
+  images: ["womenatdesk2resizedcropped2.jpg"],
   badge,
   tagline: "about us",
   title: "Transforming Ideas into Digital Reality",

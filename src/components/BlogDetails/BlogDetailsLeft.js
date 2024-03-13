@@ -47,7 +47,7 @@ const BlogDetailsLeft = ({ id }) => {
   return (
     <div className="blog-details__left">
       <div className="blog-details__img">
-        <Image src={image.src} alt="" />
+        <Image src={image.src} alt="welcome" />
         <div className="blog-details__date-box">
           <p>{date}</p>
         </div>
