@@ -59,20 +59,20 @@ const BlogDetailsLeft = ({ id }) => {
       <div className="blog-details__content">
         <ul className="list-unstyled blog-details__meta">
           <li>
-            <Link href="/blog-details">
+            {/* <Link href="/blog-details">
               <a>
               </a>
-            </Link>
+            </Link> */}
           </li>
           <li>
             <p></p>
            
           </li>
           <li>
-            <Link href="/blog-details">
+            {/* <Link href="/blog-details">
               <a>
               </a>
-            </Link>
+            </Link> */}
           </li>
         </ul>
         <h3 className="blog-details__title">{title}</h3>
