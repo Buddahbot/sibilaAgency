@@ -1,21 +1,38 @@
 import projectDetails from "@/data/projectDetails";
 import React from "react";
+import Link from "next/link";
 import { Col, Container, Image, Row } from "react-bootstrap";
 
-const { image, title, texts, points, name, category, date, socials } =
-  projectDetails;
+// const { image, title, texts, points, name, category, date, socials } =
+//   projectDetails;
 
-const ProjectDetailsPage = () => {
+const ProjectDetailsPage = ({ id }) => {
+  console.log("prohectdetailspage id", id);
+
+  const currentProjectDetails = projectDetails.find(
+    (project) => project.id === parseInt(id)
+  );
+  console.log("here is project :", currentProjectDetails);
+
+  const { link, image, title, texts, points, name, category, date, socials } =
+    currentProjectDetails;
+
+  console.log("here is link", link);
+
   return (
     <section className="project-details">
       <Container>
         <Row>
           <Col xl={12}>
-            <div className="project-details__img">
-              <Image src={image.src} alt="" />
-            </div>
+            <Link href={link} passHref>
+            <a target="_blank" rel="noopener noreferrer">
+                <div className="project-details__img">
+                  <Image src={image.src} alt="Tatyana Kronbichler Front Page" />
+                </div>
+              </a>
+            </Link>
           </Col>
-        </Row>
+        </Row>{" "}
         <div className="project-details__content">
           <Row>
             <Col xl={8} lg={7}>
@@ -49,7 +66,7 @@ const ProjectDetailsPage = () => {
                   <div className="project-details__details-info">
                     <div className="project-details__details-info-single">
                       <h5 className="project-details__details-info-client">
-                        Clients:
+                        Client:
                       </h5>
                       <p className="project-details__details-info-name">
                         {name}
@@ -63,14 +80,14 @@ const ProjectDetailsPage = () => {
                         {category}
                       </p>
                     </div>
-                    <div className="project-details__details-info-single">
+                    {/* <div className="project-details__details-info-single">
                       <h5 className="project-details__details-info-client">
                         Date:
                       </h5>
                       <p className="project-details__details-info-name">
                         {date}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="project-details__details-social-list">
                     {socials.map(({ id, icon, href }) => (

@@ -1,5 +1,5 @@
 import contactPage from "@/data/contactPage";
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Title from "../Reuseable/Title";
@@ -9,13 +9,34 @@ const { title, tagline, inputs } = contactPage;
 const textarea = inputs[inputs.length - 1];
 
 const ContactPage = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const url = "/api/contact"; // URL to the API endpoint
+      console.log("Sending request to:", url);
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      console.log("here is response:", response);
+      setFormSubmitted(true)
+
+      // Rest of your code to handle the response...
+    } catch (error) {
+      console.error("Error sending request:", error);
+    }
+  };
 
   return (
     <section className="contact-page">
@@ -63,9 +84,9 @@ const ContactPage = () => {
                         <span className="error">This field is required</span>
                       )}
                     </div>
-                    <button type="submit" className="thm-btn comment-form__btn">
+                   { !formSubmitted ? <button type="submit" className="thm-btn comment-form__btn">
                       send a message
-                    </button>
+                    </button>: <h3>We have received your message and will get back to you as soon as possible. Thank you!</h3>}
                   </Col>
                 </Row>
               </form>

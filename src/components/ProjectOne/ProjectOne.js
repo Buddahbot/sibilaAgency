@@ -51,7 +51,7 @@ const ProjectOne = ({ projectPage = false }) => {
           className="row filter-layout position-relative"
         >
           {filteredProjects.map((project) => (
-            <SingleProject project={project} key={project.id} />
+            <SingleProject project={project} key={project.id} id={project.id}/>
           ))}
         </Masonry>
       </Container>

@@ -97,11 +97,11 @@ const BlogDetailsLeft = ({ id }) => {
       </div>
       <div className="blgo-details__pagenation-box">
         <ul className="list-unstyled blog-details__pagenation">
-          {pagination.map((text, i) => (
+          {/* {pagination.map((text, i) => (
             <li key={i}>
               <TextSplit text={text} />
             </li>
-          ))}
+          ))} */}
         </ul>
       </div>
     </div>

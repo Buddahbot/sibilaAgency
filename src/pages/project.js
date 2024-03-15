@@ -6,7 +6,7 @@ import React from "react";
 const Project = () => {
   return (
     <Layout pageTitle="Project">
-      <PageHeader title="Projects" />
+      <PageHeader title="Recent Projects" />
       <ProjectOne projectPage />
     </Layout>
   );

@@ -27,14 +27,14 @@ const MobileMenu = () => {
         >
           <i className="fa fa-times"></i>
         </span>
-
+{/* 
         <div className="logo-box">
           <Link href="/">
             <a aria-label="logo image">
               <Image src={logo1.src} width={155} alt="" />
             </a>
           </Link>
-        </div>
+        </div> */}
         <div className="mobile-nav__container">
           <ul className="main-menu__list">
             {navItems.map(({ id, ...item }) => (

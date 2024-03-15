@@ -4004,6 +4004,7 @@ ul {
 .footer-widget__contact {
   position: relative;
   display: block;
+  /* border: 3px solid yellow; */
 }
 
 .footer-widget__title {
@@ -4012,6 +4013,7 @@ ul {
   text-transform: uppercase;
   line-height: 28px;
   margin-bottom: 31px;
+  /* border: 3px solid red; */
 }
 
 .footer-widget__contact-text {
@@ -4019,6 +4021,7 @@ ul {
   color: #807e86;
   line-height: 34px;
   margin: 0;
+  /* border: 3px solid pink; */
 }
 
 .footer-widget__contact-email-phone {
@@ -4051,12 +4054,14 @@ ul {
 .footer-widget__links {
   position: relative;
   display: block;
+  /* border: 3px solid orange; */
 }
 
 .footer-widget__links-list {
   position: relative;
   display: block;
   float: left;
+  /* border: 3px solid green; */
 }
 
 .footer-widget__links-list li {
@@ -4105,8 +4110,9 @@ ul {
   display: block;
   background-color: #100f12;
   margin-left: 50px;
-  padding: 43px 50px 41px;
-  margin-top: 7px;
+  padding: 10px;
+  /* padding: 43px 50px 41px; */
+  margin-top: -10px;
 }
 
 .footer-widget__newsletter .footer-widget__title {
@@ -7875,7 +7881,7 @@ ul {
 
 .project-details__img img {
   width: 100%;
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
 }
 
 .project-details__content {

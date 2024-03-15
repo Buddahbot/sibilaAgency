@@ -21,7 +21,7 @@ const contactPage = {
       required: false,
     },
     {
-      type: "email",
+      type: "text",
       placeholder: "Subject",
       name: "subject",
       required: true,

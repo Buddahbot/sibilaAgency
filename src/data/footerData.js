@@ -4,7 +4,7 @@ const footerData = {
   bg,
   title: "We help you solve business problems, foster customer loyalty, and grow your income.",
   phone: "34 661 02 36 22",
-  email: "needhelp@company.com",
+  email: "sebastian.sibila at gmail dotcom",
   address: "Vista Hermosa 117",
   city: "Santa Margarita, Spain",
   year: new Date().getFullYear(),
@@ -40,12 +40,12 @@ const footerData = {
     {
       id: 2,
       title: "About",
-      href: "/team",
+      href: "/about",
     },
     {
       id: 3,
       title: "Services",
-      href: "/project",
+      href: "/services",
     },
     // {
     //   id: 4,
@@ -65,12 +65,12 @@ const footerData = {
     {
       id: 7,
       title: "Portfolio",
-      href: "/about",
+      href: "/project",
     },
     {
       id: 8,
       title: "Insights",
-      href: "/about",
+      href: "/blog",
     },
     {
       id: 9,

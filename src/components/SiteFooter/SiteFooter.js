@@ -1,16 +1,35 @@
 import footerData from "@/data/footerData";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 const { bg, title, phone, socials, address, city, email, links, year, author } =
   footerData;
 
 const SiteFooter = () => {
-  const handleSubmit = (e) => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    console.log(formData.get("email"));
+    const emailThatSubscribed = formData.get("email");
+    try {
+      const url = "/api/contact"; // URL to the API endpoint
+      console.log("Sending request to:", url);
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: emailThatSubscribed, name: "Newsletter Subscription" }),
+      });
+      console.log("here is response:", response);
+      setFormSubmitted(true);
+
+    } catch (error) {
+      console.error("Error sending request:", error);
+    }
   };
 
   return (
@@ -50,9 +69,8 @@ const SiteFooter = () => {
               <Col xl={3} lg={4} className="animated fadeInUp">
                 <div className="footer-widget__column footer-widget__contact">
                   <h3 className="footer-widget__title">Contact</h3>
-                  <p className="footer-widget__contact-text">
-                    {address} <br /> {city}
-                  </p>
+                  <p className="footer-widget__contact-text">{address}</p>
+                  <p className="footer-widget__contact-text">{city}</p>
                   <h4 className="footer-widget__contact-email-phone">
                     <a
                       href={`mailto:${email}`}
@@ -73,14 +91,14 @@ const SiteFooter = () => {
                 <div className="footer-widget__column footer-widget__links clearfix">
                   <h3 className="footer-widget__title">Links</h3>
                   <ul className="footer-widget__links-list list-unstyled clearfix">
-                    {links.slice(0, 5).map(({ id, title, href }) => (
+                    {links.slice(0, 3).map(({ id, title, href }) => (
                       <li key={id}>
                         <Link href={href}>{title}</Link>
                       </li>
                     ))}
                   </ul>
                   <ul className="footer-widget__links-list footer-widget__links-list-two list-unstyled clearfix">
-                    {links.slice(5).map(({ id, title, href }) => (
+                    {links.slice(3, 7).map(({ id, title, href }) => (
                       <li key={id}>
                         <Link href={href}>{title}</Link>
                       </li>
@@ -91,30 +109,31 @@ const SiteFooter = () => {
               <Col xl={5} lg={4} className="animated fadeInUp">
                 <div className="footer-widget__column footer-widget__newsletter">
                   <h3 className="footer-widget__title">Newsletter</h3>
-                  <form
+                  {!formSubmitted ?   <form
                     onSubmit={handleSubmit}
                     className="footer-widget__newsletter-form"
                   >
-                    <div className="footer-widget__newsletter-input-box">
-                      <input
+              <div className="footer-widget__newsletter-input-box">
+                   <input
                         type="email"
                         placeholder="Email address"
                         name="email"
+                        required= {true}
                       />
-                      <button
+                  <button
                         type="submit"
                         className="footer-widget__newsletter-btn"
                       >
                         <i className="far fa-paper-plane"></i>
                       </button>
                     </div>
-                  </form>
+                  </form>:<h4 style={{color: "whitesmoke"}}>Thank's for subscribing!</h4>}
                   <div className="footer-widget__newsletter-bottom">
-                    <div className="footer-widget__newsletter-bottom-icon">
-                      <i className="fa fa-check"></i>
+                    <div className="">
+                      {/* <i className="fa fa-check"></i> */}
                     </div>
                     <div className="footer-widget__newsletter-bottom-text">
-                      <p>I agree to all your terms and policies</p>
+                      {/* <p>I agree to all your terms and policies</p> */}
                     </div>
                   </div>
                 </div>
