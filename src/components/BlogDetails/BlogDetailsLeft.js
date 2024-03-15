@@ -28,7 +28,11 @@ const BlogDetailsLeft = ({ id }) => {
     (blog) => blog.id === parseInt(id)
   );
 
-  console.log("here is currentBlogDetails:", currentBlogDetails);
+  // console.log("here is currentBlogDetails:", currentBlogDetails);
+
+  if (!currentBlogDetails) {
+    // Handle the case where the blog entry with the given id is not found
+    return <div><h1>Blog entry not found.</h1></div>}
 
   const {
     image,

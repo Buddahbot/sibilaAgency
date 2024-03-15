@@ -127,7 +127,7 @@ const SiteFooter = () => {
                         <i className="far fa-paper-plane"></i>
                       </button>
                     </div>
-                  </form>:<h4 style={{color: "whitesmoke"}}>Thank's for subscribing!</h4>}
+                  </form>:<h4 style={{color: "whitesmoke"}}>Thank &apos;s for subscribing!</h4>}
                   <div className="footer-widget__newsletter-bottom">
                     <div className="">
                       {/* <i className="fa fa-check"></i> */}

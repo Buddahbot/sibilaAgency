@@ -12,7 +12,7 @@ const SingleBlog = ({ blog = {} }) => {
           <Link href={`/blog-details?id=${id}`}>
           <Image src={require(`@/images/blog/${image}`).default.src} alt="" />
           </Link>
-          <Link href={`/blog-details?id=${id}`}>
+          <Link href={`/blog-details?id=${id}`}  passHref>
             <a>
               <span className="blog-one__plus"></span>
             </a>
