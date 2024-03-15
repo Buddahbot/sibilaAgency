@@ -7,17 +7,23 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 //   projectDetails;
 
 const ProjectDetailsPage = ({ id }) => {
-  console.log("prohectdetailspage id", id);
+  // console.log("prohectdetailspage id", id);
 
   const currentProjectDetails = projectDetails.find(
     (project) => project.id === parseInt(id)
   );
-  console.log("here is project :", currentProjectDetails);
+
+  if(!currentProjectDetails ) {
+    return (
+      <div>No Projects found</div>
+    )
+  }
+  // console.log("here is project :", currentProjectDetails);
 
   const { link, image, title, texts, points, name, category, date, socials } =
     currentProjectDetails;
 
-  console.log("here is link", link);
+  // console.log("here is link", link);
 
   return (
     <section className="project-details">
