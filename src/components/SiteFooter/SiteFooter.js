@@ -22,11 +22,13 @@ const SiteFooter = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: emailThatSubscribed, name: "Newsletter Subscription" }),
+        body: JSON.stringify({
+          email: emailThatSubscribed,
+          name: "Newsletter Subscription",
+        }),
       });
       console.log("here is response:", response);
       setFormSubmitted(true);
-
     } catch (error) {
       console.error("Error sending request:", error);
     }
@@ -109,25 +111,31 @@ const SiteFooter = () => {
               <Col xl={5} lg={4} className="animated fadeInUp">
                 <div className="footer-widget__column footer-widget__newsletter">
                   <h3 className="footer-widget__title">Newsletter</h3>
-                  {!formSubmitted ?   <form
-                    onSubmit={handleSubmit}
-                    className="footer-widget__newsletter-form"
-                  >
-              <div className="footer-widget__newsletter-input-box">
-                   <input
-                        type="email"
-                        placeholder="Email address"
-                        name="email"
-                        required= {true}
-                      />
-                  <button
-                        type="submit"
-                        className="footer-widget__newsletter-btn"
-                      >
-                        <i className="far fa-paper-plane"></i>
-                      </button>
-                    </div>
-                  </form>:<h4 style={{color: "whitesmoke"}}>Thank &apos;s for subscribing!</h4>}
+                  {!formSubmitted ? (
+                    <form
+                      onSubmit={handleSubmit}
+                      className="footer-widget__newsletter-form"
+                    >
+                      <div className="footer-widget__newsletter-input-box">
+                        <input
+                          type="email"
+                          placeholder="Email address"
+                          name="email"
+                          required={true}
+                        />
+                        <button
+                          type="submit"
+                          className="footer-widget__newsletter-btn"
+                        >
+                          <i className="far fa-paper-plane"></i>
+                        </button>
+                      </div>
+                    </form>
+                  ) : (
+                    <h4 style={{ color: "whitesmoke" }}>
+                      Thanks for subscribing!
+                    </h4>
+                  )}
                   <div className="footer-widget__newsletter-bottom">
                     <div className="">
                       {/* <i className="fa fa-check"></i> */}
