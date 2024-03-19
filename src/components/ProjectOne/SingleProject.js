@@ -4,7 +4,7 @@ import { Col, Image } from "react-bootstrap";
 
 const SingleProject = ({ project = {} }) => {
   const { id, image, title, tagline, col = 4, filter = [] } = project;
-  console.log('here is id in singelproject', id)
+ 
 
   return (
     <Col xl={col} lg={6} md={6} className={`filter-item ${filter.join(" ")}`}>
