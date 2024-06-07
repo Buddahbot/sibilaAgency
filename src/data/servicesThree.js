@@ -26,7 +26,7 @@ const servicesThree = {
       title: "Mobile App \n development",
       icon: "icon-front-end",
       link: "/website-development",
-      text: "Empower your business with our cross-platform mobile app development services, ensuring seamless functionality across various devices and operating systems.",
+      text: "Empower your business with our cross-platform app development services, ensuring functionality across various devices and operating systems.",
     },
   ],
 };

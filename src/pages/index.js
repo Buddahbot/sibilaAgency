@@ -20,7 +20,7 @@ dotenv.config();
 
 const Home = () => {
   return (
-    <Layout pageTitle="Home Three">
+    <Layout pageTitle="Your Partner">
       <MainSliderThree />
       <CTATwo />
       <ServicesThree />
