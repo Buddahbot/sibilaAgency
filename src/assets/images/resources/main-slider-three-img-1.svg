@@ -1,4 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <style>
+    @keyframes blur {
+      0% { filter: blur(0px); }
+      50% { filter: blur(2px); }
+      100% { filter: blur(0px); }
+    }
+    .frontend-layer, .backend-layer, .database-layer {
+      animation: blur 3s infinite;
+    }
+  </style>
+  
   <defs>
     <!-- Gradients -->
     <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -10,16 +21,6 @@
       <stop offset="0%" style="stop-color:#17161a;stop-opacity:0.95" />
       <stop offset="100%" style="stop-color:#2d2c31;stop-opacity:0.95" />
     </linearGradient>
-
-    <!-- Text Animation -->
-    <filter id="blur">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="0">
-        <animate attributeName="stdDeviation"
-          values="0;2;0"
-          dur="3s"
-          repeatCount="indefinite"/>
-      </feGaussianBlur>
-    </filter>
   </defs>
 
   <!-- Floating Balls -->
@@ -77,7 +78,7 @@
   <g transform="translate(200, 150)">
     <!-- Stack Layers -->
     <!-- Frontend Layer -->
-    <g class="frontend-layer" filter="url(#blur)">
+    <g class="frontend-layer">
       <rect x="0" y="0" width="400" height="100" rx="12" fill="url(#redGradient)"/>
       <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Frontend</text>
       <circle cx="300" cy="50" r="15" fill="#ffffff" opacity="0.9"/>
@@ -86,7 +87,7 @@
     </g>
 
     <!-- Backend Layer -->
-    <g class="backend-layer" transform="translate(0, 120)" filter="url(#blur)">
+    <g class="backend-layer" transform="translate(0, 120)">
       <rect x="0" y="0" width="400" height="100" rx="12" fill="url(#darkGradient)"/>
       <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Backend</text>
       <rect x="300" y="35" width="30" height="30" rx="6" fill="#ffffff" opacity="0.9"/>
@@ -94,7 +95,7 @@
     </g>
 
     <!-- Database Layer -->
-    <g class="database-layer" transform="translate(0, 240)" filter="url(#blur)">
+    <g class="database-layer" transform="translate(0, 240)">
       <rect x="0" y="0" width="400" height="100" rx="12" fill="rgba(23, 22, 26, 0.9)" stroke="#ffffff" stroke-width="1"/>
       <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Database</text>
       <path d="M300,35 L330,35 L315,65 Z" fill="#dd0429" opacity="0.9"/>
