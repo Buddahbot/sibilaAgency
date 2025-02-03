@@ -2,12 +2,22 @@ import React, { useEffect, useState } from 'react';
 
 const CookieConsent = () => {
   const [showConsent, setShowConsent] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const hasAcceptedCookies = localStorage.getItem('cookieConsent') === 'true';
     if (!hasAcceptedCookies) {
       setTimeout(() => setShowConsent(true), 1000);
     }
+
+    // Handle resize for responsive design
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleAccept = () => {
@@ -38,11 +48,11 @@ const CookieConsent = () => {
       <div className="max-w-7xl mx-auto">
         <div 
           style={{
-            padding: '1.75rem',
+            padding: isMobile ? '1.25rem' : '1.75rem',
             display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: '2rem',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: isMobile ? 'stretch' : 'center',
+            gap: isMobile ? '1.5rem' : '2rem',
             fontFamily: 'var(--mibooz-font)',
           }}
         >
@@ -51,7 +61,7 @@ const CookieConsent = () => {
             <h3 
               style={{
                 color: '#ffffff',
-                fontSize: '1.25rem',
+                fontSize: isMobile ? '1.125rem' : '1.25rem',
                 fontFamily: 'var(--mibooz-font-two)',
                 marginBottom: '0.75rem',
                 letterSpacing: '0.025em',
@@ -63,7 +73,7 @@ const CookieConsent = () => {
             <p 
               style={{
                 color: '#707070',
-                fontSize: '0.95rem',
+                fontSize: isMobile ? '0.875rem' : '0.95rem',
                 lineHeight: '1.6',
                 margin: 0,
               }}
@@ -79,8 +89,8 @@ const CookieConsent = () => {
               display: 'flex',
               gap: '1rem',
               alignItems: 'center',
-              minWidth: '280px',
-              justifyContent: 'flex-end',
+              justifyContent: isMobile ? 'stretch' : 'flex-end',
+              minWidth: isMobile ? 'auto' : '280px',
             }}
           >
             <button
@@ -96,7 +106,8 @@ const CookieConsent = () => {
                 color: '#707070',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                minWidth: '120px',
+                flex: isMobile ? '1' : 'initial',
+                minWidth: isMobile ? 'auto' : '120px',
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.backgroundColor = 'rgba(112, 112, 112, 0.1)';
@@ -122,7 +133,8 @@ const CookieConsent = () => {
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                minWidth: '120px',
+                flex: isMobile ? '1' : 'initial',
+                minWidth: isMobile ? 'auto' : '120px',
                 boxShadow: '0 4px 20px rgba(221, 4, 41, 0.2)',
               }}
               onMouseOver={(e) => {
