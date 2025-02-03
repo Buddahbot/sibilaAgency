@@ -1,3 +1,66 @@
+// import Header from "@/components/Header/Header";
+// import Preloader from "@/components/Preloader/Preloader";
+// import { useRootContext } from "@/context/context";
+// import useScroll from "@/hooks/useScroll";
+// import Head from "next/head";
+// import React, { useEffect, useState } from "react";
+// import { Link as ScrollLink } from "react-scroll";
+// import MobileMenu from "../MobileMenu/MobileMenu";
+// import Search from "../Search/Search";
+// import SiteFooter from "../SiteFooter/SiteFooter";
+
+// const Layout = ({ children, pageTitle }) => {
+//   const [loading, setLoading] = useState(true);
+//   const { menuStatus } = useRootContext();
+//   const scrollTop = useScroll(100);
+
+//   useEffect(() => {
+//     const timeoutId = setTimeout(() => {
+//       setLoading(false);
+//     }, 500);
+
+//     return () => clearTimeout(timeoutId);
+//   }, []);
+
+//   return (
+//     <>
+//       <Head>
+//         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//         <title>
+//         Sibila Digital Solutions || Web App Development
+//         </title>
+//       </Head>
+//       <Preloader loading={loading} />
+//       <main
+//         id="wrapper"
+//         style={{ opacity: loading ? 0 : 1 }}
+//         className="page-wrapper"
+//       >
+//         <Header pageTitle={pageTitle} />
+//         {children}
+//         <SiteFooter />
+//       </main>
+//       {menuStatus && <MobileMenu />}
+//       <Search />
+//       {scrollTop && (
+//         <ScrollLink
+//           to="wrapper"
+//           smooth={true}
+//           duration={500}
+//           id="backToTop"
+//           style={{ cursor: "pointer" }}
+//           className="scroll-to-target scroll-to-top d-inline-block fadeIn animated"
+//         >
+//           <i className="fa fa-angle-up"></i>
+//         </ScrollLink>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Layout;
+
+
 import Header from "@/components/Header/Header";
 import Preloader from "@/components/Preloader/Preloader";
 import { useRootContext } from "@/context/context";
@@ -15,25 +78,41 @@ const Layout = ({ children, pageTitle }) => {
   const scrollTop = useScroll(100);
 
   useEffect(() => {
+    // Disable default touch behavior
+    document.body.style.overscrollBehavior = 'none';
+    
+    // Add touch-action manipulation for better scroll control
+    document.documentElement.style.touchAction = 'pan-y pinch-zoom';
+    
     const timeoutId = setTimeout(() => {
       setLoading(false);
     }, 500);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearTimeout(timeoutId);
+      // Reset styles when component unmounts
+      document.body.style.overscrollBehavior = 'auto';
+      document.documentElement.style.touchAction = 'auto';
+    };
   }, []);
 
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>
-        Sibila Digital Solutions || Web App Development
+          Sibila Digital Solutions || Web App Development
         </title>
       </Head>
       <Preloader loading={loading} />
       <main
         id="wrapper"
-        style={{ opacity: loading ? 0 : 1 }}
+        style={{
+          opacity: loading ? 0 : 1,
+          WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on iOS
+          overflowY: 'visible',
+          position: 'relative'
+        }}
         className="page-wrapper"
       >
         <Header pageTitle={pageTitle} />

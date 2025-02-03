@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <Layout pageTitle="Your Partner">
       <MainSliderThree />
-      <CTATwo />
+      {/* <CTATwo /> */}
       <ServicesThree />
       <WelcomeThree />
       {/* <WatchVideo /> */}

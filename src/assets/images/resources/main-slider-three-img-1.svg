@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dd0429;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ff1f4b;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#17161a;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#2d2c31;stop-opacity:0.95" />
+    </linearGradient>
+
+    <!-- Text Animation -->
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0">
+        <animate attributeName="stdDeviation"
+          values="0;2;0"
+          dur="3s"
+          repeatCount="indefinite"/>
+      </feGaussianBlur>
+    </filter>
+  </defs>
+
+  <!-- Floating Balls -->
+  <g class="floating-elements">
+    <!-- Ball 1 -->
+    <circle cx="100" cy="100" r="8" fill="#dd0429" opacity="0.6">
+      <animate attributeName="cx" 
+        values="100;150;100" 
+        dur="15s" 
+        repeatCount="indefinite"/>
+      <animate attributeName="cy"
+        values="100;150;100"
+        dur="10s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ball 2 -->
+    <circle cx="700" cy="500" r="12" fill="#17161a" opacity="0.4">
+      <animate attributeName="cx"
+        values="700;650;700"
+        dur="20s"
+        repeatCount="indefinite"/>
+      <animate attributeName="cy"
+        values="500;450;500"
+        dur="15s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ball 3 -->
+    <circle cx="200" cy="500" r="6" fill="#dd0429" opacity="0.5">
+      <animate attributeName="cx"
+        values="200;250;200"
+        dur="18s"
+        repeatCount="indefinite"/>
+      <animate attributeName="cy"
+        values="500;450;500"
+        dur="12s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ball 4 -->
+    <circle cx="600" cy="100" r="10" fill="#17161a" opacity="0.3">
+      <animate attributeName="cx"
+        values="600;650;600"
+        dur="25s"
+        repeatCount="indefinite"/>
+      <animate attributeName="cy"
+        values="100;150;100"
+        dur="20s"
+        repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Main Content Group -->
+  <g transform="translate(200, 150)">
+    <!-- Stack Layers -->
+    <!-- Frontend Layer -->
+    <g class="frontend-layer" filter="url(#blur)">
+      <rect x="0" y="0" width="400" height="100" rx="12" fill="url(#redGradient)"/>
+      <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Frontend</text>
+      <circle cx="300" cy="50" r="15" fill="#ffffff" opacity="0.9"/>
+      <circle cx="340" cy="50" r="15" fill="#ffffff" opacity="0.7"/>
+      <circle cx="380" cy="50" r="15" fill="#ffffff" opacity="0.5"/>
+    </g>
+
+    <!-- Backend Layer -->
+    <g class="backend-layer" transform="translate(0, 120)" filter="url(#blur)">
+      <rect x="0" y="0" width="400" height="100" rx="12" fill="url(#darkGradient)"/>
+      <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Backend</text>
+      <rect x="300" y="35" width="30" height="30" rx="6" fill="#ffffff" opacity="0.9"/>
+      <rect x="340" y="35" width="30" height="30" rx="6" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Database Layer -->
+    <g class="database-layer" transform="translate(0, 240)" filter="url(#blur)">
+      <rect x="0" y="0" width="400" height="100" rx="12" fill="rgba(23, 22, 26, 0.9)" stroke="#ffffff" stroke-width="1"/>
+      <text x="30" y="55" fill="#ffffff" font-family="Federo, sans-serif" font-size="24" letter-spacing="0.2em" text-transform="uppercase">Database</text>
+      <path d="M300,35 L330,35 L315,65 Z" fill="#dd0429" opacity="0.9"/>
+      <path d="M340,35 L370,35 L355,65 Z" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Connecting Lines with Animation -->
+    <g>
+      <line x1="200" y1="100" x2="200" y2="120" stroke="#dd0429" stroke-width="2" stroke-dasharray="4,4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="220" x2="200" y2="240" stroke="#ffffff" stroke-width="2" stroke-dasharray="4,4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+</svg>

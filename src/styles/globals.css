@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -11,4 +11,66 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ */
+
+ /* Add to globals.css */
+html {
+  overflow-y: auto;
+  overscroll-behavior-y: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-y: auto;
+  overscroll-behavior-y: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure proper stacking context */
+#wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix iOS momentum scrolling */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove pull-to-refresh but keep smooth scrolling */
+body {
+  touch-action: pan-y;
+}
+
+/* Prevent horizontal bounce on narrow screens */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix mobile viewport height issues */
+.mobile-nav__wrapper {
+  position: fixed;
+  height: 100%;
+  height: -webkit-fill-available;
 }

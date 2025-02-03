@@ -74,24 +74,204 @@
 
 // export default MyDocument;
 
+// import Document, { Html, Head, Main, NextScript } from "next/document";
+
+// class MyDocument extends Document {
+//   static async getInitialProps(ctx) {
+//     const originalRenderPage = ctx.renderPage;
+
+//     // Run the React rendering logic synchronously
+//     ctx.renderPage = () =>
+//       originalRenderPage({
+//         // Useful for wrapping the whole react tree
+//         enhanceApp: (App) => App,
+//         // Useful for wrapping in a per-page basis
+//         enhanceComponent: (Component) => Component,
+//       });
+
+//     // Run the parent `getInitialProps`, it now includes the custom `renderPage`
+//     const initialProps = await Document.getInitialProps(ctx);
+
+//     return initialProps;
+//   }
+
+//   render() {
+//     return (
+//       <Html lang="en">
+//         <Head>
+//           {/* Google Analytics tracking code */}
+//           <script
+//             async
+//             src="https://www.googletagmanager.com/gtag/js?id=G-1WDYM80XFH"
+//           ></script>
+//           <script
+//             dangerouslySetInnerHTML={{
+//               __html: `
+//                 window.dataLayer = window.dataLayer || [];
+//                 function gtag(){dataLayer.push(arguments);}
+//                 gtag('js', new Date());
+//                 gtag('config', 'G-1WDYM80XFH');
+//               `,
+//             }}
+//           />
+//           {/* End of Google Analytics tracking code */}
+
+//           {/* Your existing meta tags and links */}
+//           <meta charSet="UTF-8" />
+//           <link
+//             rel="apple-touch-icon"
+//             sizes="180x180"
+//             href="apple-touch-icon.png"
+//           />
+//           <link
+//             rel="icon"
+//             type="image/png"
+//             sizes="32x32"
+//             href="favicon-32x32.png"
+//           />
+//           <link
+//             rel="icon"
+//             type="image/png"
+//             sizes="16x16"
+//             href="favicon-16x16.png"
+//           />
+//           <link rel="icon" href="favicon.ico" />
+//           <link rel="manifest" href="manifest.json" />
+//           <meta
+//             name="description"
+//             content="Mibooz NextJS Template For Business"
+//           />
+//           <link
+//             rel="preconnect"
+//             href="https://fonts.googleapis.com"
+//           />
+//           <link
+//             rel="preconnect"
+//             href="https://fonts.gstatic.com"
+//             crossOrigin="true"
+//           />
+//           <link
+//             href="https://fonts.googleapis.com/css2?family=Federo&display=swap"
+//             rel="stylesheet"
+//           />
+//           <link
+//             href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+//             rel="stylesheet"
+//           />
+//           {/* End of your existing meta tags and links */}
+//         </Head>
+//         <body>
+//           <Main />
+//           <NextScript />
+//         </body>
+//       </Html>
+//     );
+//   }
+// }
+
+// export default MyDocument;
+
+
+// import Document, { Html, Head, Main, NextScript } from "next/document";
+// import Script from "next/script";
+
+// class MyDocument extends Document {
+//   static async getInitialProps(ctx) {
+//     const originalRenderPage = ctx.renderPage;
+
+//     ctx.renderPage = () =>
+//       originalRenderPage({
+//         enhanceApp: (App) => App,
+//         enhanceComponent: (Component) => Component,
+//       });
+
+//     const initialProps = await Document.getInitialProps(ctx);
+//     return initialProps;
+//   }
+
+//   render() {
+//     return (
+//       <Html lang="en">
+//         <Head>
+//           <meta charSet="UTF-8" />
+//           <link
+//             rel="apple-touch-icon"
+//             sizes="180x180"
+//             href="apple-touch-icon.png"
+//           />
+//           <link
+//             rel="icon"
+//             type="image/png"
+//             sizes="32x32"
+//             href="favicon-32x32.png"
+//           />
+//           <link
+//             rel="icon"
+//             type="image/png"
+//             sizes="16x16"
+//             href="favicon-16x16.png"
+//           />
+//           <link rel="icon" href="favicon.ico" />
+//           <link rel="manifest" href="manifest.json" />
+//           <meta
+//             name="description"
+//             content="Mibooz NextJS Template For Business"
+//           />
+//           <link
+//             rel="preconnect"
+//             href="https://fonts.googleapis.com"
+//           />
+//           <link
+//             rel="preconnect"
+//             href="https://fonts.gstatic.com"
+//             crossOrigin="true"
+//           />
+//           <link
+//             href="https://fonts.googleapis.com/css2?family=Federo&display=swap"
+//             rel="stylesheet"
+//           />
+//           <link
+//             href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+//             rel="stylesheet"
+//           />
+//         </Head>
+//         <body>
+//           <Main />
+//           <NextScript />
+//           <Script
+//             src="https://www.googletagmanager.com/gtag/js?id=G-1WDYM80XFH"
+//             strategy="afterInteractive"
+//           />
+//           <Script id="google-analytics" strategy="afterInteractive">
+//             {`
+//               window.dataLayer = window.dataLayer || [];
+//               function gtag(){dataLayer.push(arguments);}
+//               gtag('js', new Date());
+//               gtag('config', 'G-1WDYM80XFH');
+//             `}
+//           </Script>
+//         </body>
+//       </Html>
+//     );
+//   }
+// }
+
+// export default MyDocument;
+
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const originalRenderPage = ctx.renderPage;
 
-    // Run the React rendering logic synchronously
     ctx.renderPage = () =>
       originalRenderPage({
-        // Useful for wrapping the whole react tree
         enhanceApp: (App) => App,
-        // Useful for wrapping in a per-page basis
         enhanceComponent: (Component) => Component,
       });
 
-    // Run the parent `getInitialProps`, it now includes the custom `renderPage`
     const initialProps = await Document.getInitialProps(ctx);
-
     return initialProps;
   }
 
@@ -99,24 +279,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Google Analytics tracking code */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-1WDYM80XFH"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-1WDYM80XFH');
-              `,
-            }}
-          />
-          {/* End of Google Analytics tracking code */}
-
-          {/* Your existing meta tags and links */}
           <meta charSet="UTF-8" />
           <link
             rel="apple-touch-icon"
@@ -158,7 +320,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
           />
-          {/* End of your existing meta tags and links */}
         </Head>
         <body>
           <Main />

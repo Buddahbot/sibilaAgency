@@ -4,6 +4,8 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import { SwiperSlide } from "swiper/react";
 import TextSplit from "../Reuseable/TextSplit";
 
+import mainSliderImage from "../../assets/images/resources/main-slider-three-img-1.svg";
+
 const SingleSlider = ({ slider = {} }) => {
   const { bg, map, images, socials, title, text, arrow } = slider;
 
@@ -17,20 +19,23 @@ const SingleSlider = ({ slider = {} }) => {
         className="main-slider-three-map"
         style={{ backgroundImage: `url(${map.src})` }}
       ></div>
-      {images.map((image, i) => (
+      {/* {images.map((image, i) => (
         <div key={i} className={`main-slider-three__img-${i + 1}`}>
           <Image
             src={require(`@/images/resources/${image}`).default.src}
             alt=""
           />
         </div>
-      ))}
+      ))} */}
+              <div  className={`main-slider-three__img-1`}>
+<Image src={mainSliderImage.src}  alt="" style={{ width: "600px", height: "auto" }} />
       <div className="main-slider__social">
-        {socials.map(({ title, href }, i) => (
+               </div>
+        {/* {socials.map(({ title, href }, i) => (
           <a key={i} href={href}>
             {title}
           </a>
-        ))}
+        ))} */}
       </div>
       <Container>
         <Row>

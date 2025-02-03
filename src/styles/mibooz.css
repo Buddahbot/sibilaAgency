@@ -1878,12 +1878,12 @@ ul {
   position: absolute;
   top: 290px;
   right: 100px;
-  background-color: var(--mibooz-black);
+  /* background-color: var(--mibooz-black);
   opacity: 0;
   transform: translateX(100%);
   transition: transform 2000ms ease 2000ms, opacity 2000ms ease 2000ms,
     color 500ms ease, background 500ms ease;
-  z-index: 2;
+  z-index: 2; */
 }
 
 .main-slider-three__img-1 img {
